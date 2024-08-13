@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas sobre HTTP</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Preguntas y Respuestas sobre HTTP</h1>
+
+    <h2>1) Sobre qué protocolo binario está montado el protocolo HTTP?</h2>
+    <p>El protocolo HTTP no está montado directamente sobre un protocolo binario específico, sino que utiliza el protocolo TCP (Transmission Control Protocol) para la transmisión de datos de manera confiable sobre redes IP. TCP.</p>
+
+
+    <h2>2) ¿Cuáles son los clientes HTTP y los servidores HTTP más utilizados?</h2>
+    <p>Clientes HTTP más utilizados:
+        Navegadores web como Google Chrome, Mozilla Firefox, Safari, Microsoft Edge.
+    
+        Servidores HTTP más utilizados:
+        Apache HTTP Server (Apache)
+        Nginx
+        Microsoft IIS
+        LiteSpeed</p>
+
+    <h2>3)¿Qué verbos admite un comando en el requerimiento HTTP?</h2>
+    <p>Los verbos admitidos por HTTP incluyen:
+        GET: Solicita un recurso.
+        POST: Envía datos al servidor para procesar.
+        PUT: Reemplaza o crea un recurso.
+        DELETE: Elimina un recurso.
+        HEAD: Solicita solo los encabezados de la respuesta.
+        OPTIONS: Describe las opciones de comunicación para el recurso.
+        PATCH: Modifica parcialmente un recurso</p>
+
+    <h2>4) ¿Qué contenido lleva el body de un requerimiento HTTP?</h2>
+    <p>El body de un requerimiento HTTP puede contener datos que se envían al servidor, como formularios enviados por el usuario, archivos, o datos JSON, dependiendo del tipo de solicitud.</p>
+
+    <h2>5) ¿Qué diferencia existe entre un URL y un URI?</h2>
+    <p> URL (Uniform Resource Locator) es un tipo específico de URI (Uniform Resource Identifier) que proporciona los medios para localizar un recurso, incluyendo el protocolo y la dirección del recurso.
+    URI es un identificador genérico de un recurso, que puede ser un nombre, una ubicación o ambos. Todos los URLs son URIs, pero no todos los URIs son URLs.</p>
+    
+    <h2>6) ¿Cómo se almacena información relacionada con las respuestas HTTP?</h2>
+    <p>La información relacionada con las respuestas HTTP se almacena en las cabeceras (headers) de la respuesta, como `Set-Cookie` para gestionar cookies, o `Content-Type` para indicar el tipo de contenido.</p>
+
+    <h2>7) ¿Qué significa Virtual Hosting?</h2>
+    <p>Virtual hosting es una técnica usada en servidores web para alojar múltiples dominios (sitios web) en una sola máquina física o servidor. Esto permite que diferentes sitios web compartan la misma dirección IP, diferenciándolos a través de nombres de dominio.</p>
+   
+    <h2>8) ¿Por qué HTTP se considera STATELESS?</h2>
+    </p>HTTP se considera sin estado (stateless) porque cada solicitud se realiza de manera independiente; el servidor no mantiene información sobre solicitudes anteriores realizadas por el cliente. Esto significa que cada solicitud es tratada como nueva, sin contexto de solicitudes previas.</p>
+    
+    <h2>9) ¿Qué nueva versión de HTTP se está usando para mejorar la velocidad de la web?</h2>
+    <p>La versión más reciente utilizada para mejorar la velocidad de la web es HTTP/2 y HTTP/3. HTTP/2 introduce técnicas como la multiplexación de conexiones, la compresión de cabeceras y el server push. HTTP/3, que utiliza QUIC en lugar de TCP, también busca mejorar la velocidad y fiabilidad.</p>
+   
+    <h2>10) ¿Cómo va a mejorar el comportamiento de una aplicación web en ambientes ruidosos o de débil conexión?</h2>
+    <p>El comportamiento de una aplicación web en ambientes ruidosos o de débil conexión puede mejorarse utilizando HTTP/3, que está diseñado para ser más eficiente en conexiones de alta latencia o inestables, gracias a su uso del protocolo QUIC, que mejora la recuperación de datos perdidos y reduce los tiempos de reconexión.</p>
+</div>
+</body>
+</html>
