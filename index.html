@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas sobre HTTP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #007BFF;
+            margin-top: 30px;
+            font-size: 1.75em;
+            font-weight: 600;
+            padding-left: 15px;
+        }
+
+        p {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        p code {
+            background-color: #ececec;
+            color: #d63384;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Preguntas y Respuestas sobre HTTP</h1>
+
+        <ul>
+
+            <li>
+                <h2>¿Sobre qué protocolo binario está montado el protocolo HTTP?</h2>
+                <p>El protocolo HTTP no está montado directamente sobre un protocolo binario específico, sino que
+                    utiliza el protocolo TCP (Transmission Control Protocol) para la transmisión de datos de manera
+                    confiable sobre redes IP. TCP.</p>
+            </li>
+
+            <li>
+                <h2>¿Cuáles son los clientes HTTP y los servidores HTTP más utilizados?</h2>
+                <p>Clientes HTTP más utilizados:
+                    Navegadores web como Google Chrome, Mozilla Firefox, Safari, Microsoft Edge.
+
+                    Servidores HTTP más utilizados:
+                    Apache HTTP Server (Apache)
+                    Nginx
+                    Microsoft IIS
+                    LiteSpeed</p>
+
+            </li>
+            <li>
+                <h2>¿Qué verbos admite un comando en el requerimiento HTTP?</h2>
+                <p>Los verbos admitidos por HTTP incluyen:
+                    GET: Solicita un recurso.
+                    POST: Envía datos al servidor para procesar.
+                    PUT: Reemplaza o crea un recurso.
+                    DELETE: Elimina un recurso.
+                    HEAD: Solicita solo los encabezados de la respuesta.
+                    OPTIONS: Describe las opciones de comunicación para el recurso.
+                    PATCH: Modifica parcialmente un recurso</p>
+
+            </li>
+            <li>
+                <h2>¿Qué contenido lleva el body de un requerimiento HTTP?</h2>
+                <p>El body de un requerimiento HTTP puede contener datos que se envían al servidor, como formularios
+                    enviados por el usuario, archivos, o datos JSON, dependiendo del tipo de solicitud.</p>
+
+            </li>
+            <li>
+                <h2>¿Qué diferencia existe entre un URL y un URI?</h2>
+                <p> URL (Uniform Resource Locator) es un tipo específico de URI (Uniform Resource Identifier) que
+                    proporciona los medios para localizar un recurso, incluyendo el protocolo y la dirección del
+                    recurso.
+                    URI es un identificador genérico de un recurso, que puede ser un nombre, una ubicación o ambos.
+                    Todos los URLs son URIs, pero no todos los URIs son URLs.</p>
+
+                </li>
+            <li>
+                <h2>¿Cómo se almacena información relacionada con las respuestas HTTP?</h2>
+                <p>La información relacionada con las respuestas HTTP se almacena en las cabeceras (headers) de la
+                    respuesta, como `Set-Cookie` para gestionar cookies, o `Content-Type` para indicar el tipo de
+                    contenido.</p>
+            </li>
+            <li>
+                <h2>¿Qué significa Virtual Hosting?</h2>
+                <p>Virtual hosting es una técnica usada en servidores web para alojar múltiples dominios (sitios web) en
+                    una sola máquina física o servidor. Esto permite que diferentes sitios web compartan la misma
+                    dirección IP, diferenciándolos a través de nombres de dominio.</p>
+            </li>
+            <li>
+                <h2>¿Por qué HTTP se considera STATELESS?</h2>
+                </p>Sin Estado, (estado conjunto de variables que la app maneja), Stateless No depende de esas variables , por que no puede mantenerlas.HTTP se considera sin estado (stateless) porque cada solicitud se realiza de manera independiente;
+                el servidor no mantiene información sobre solicitudes anteriores realizadas por el cliente. Esto
+                significa que cada solicitud es tratada como nueva, sin contexto de solicitudes previas.</p>
+            </li>
+            <li>
+                <h2>¿Qué nueva versión de HTTP se está usando para mejorar la velocidad de la web?</h2>
+                <p>La versión más reciente utilizada para mejorar la velocidad de la web es HTTP/2 y HTTP/3. HTTP/2
+                    introduce técnicas como la multiplexación de conexiones, la compresión de cabeceras y el server
+                    PUSH. HTTP/3, que utiliza QUIC en lugar de TCP, también busca mejorar la velocidad y fiabilidad.</p>
+            </li>
+            <li>
+                <h2>¿Cómo va a mejorar el comportamiento de una aplicación web en ambientes ruidosos o de débil
+                    conexión?</h2>
+                <p>El comportamiento de una aplicación web en ambientes ruidosos o de débil conexión puede mejorarse
+                    utilizando HTTP/3, que está diseñado para ser más eficiente en conexiones de alta latencia o
+                    inestables, gracias a su uso del protocolo QUIC, que mejora la recuperación de datos perdidos y
+                    reduce los tiempos de reconexión.</p>
+            </li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
